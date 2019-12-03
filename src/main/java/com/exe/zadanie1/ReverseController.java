@@ -13,7 +13,7 @@ public class ReverseController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/reverse")
-    public Reverse greeting(@RequestParam(value="string", defaultValue="reverse") String name) {
+    public Reverse greeting(@RequestParam(value = "string", defaultValue = "reverse") String name) {
         StringBuilder reverse = new StringBuilder(name);
         return new Reverse(reverse.reverse().toString());
     }
